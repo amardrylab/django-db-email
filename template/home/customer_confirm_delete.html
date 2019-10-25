@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action ="{% url 'customer_delete' object.id  %}" method='post'>
+{% csrf_token %}
+	<strong> Your record will be deleted </strong>
+	<strong> This process can't be undone </strong>
+	<input type="submit" value="Confirm Delete">
+</form>
+
+{% endblock %}

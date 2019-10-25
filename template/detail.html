@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<p>
+Name of the Customer: {{object.name}}
+</p>
+<p>
+Phone number of the Customer: {{object.phone}}
+</p>
+<a href="{% url 'customer_update' object.id %}">Update</a>
+<p>
+<a href="{% url 'customer_delete' object.id %}">Delete</a>
+</p>
+<a href="{% url 'mail_to_customer' object.id %}">Mail To</a>
+{% endblock %}
